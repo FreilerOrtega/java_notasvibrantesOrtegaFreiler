@@ -34,7 +34,7 @@ class Concierto {
     String artista;
     LocalDate fecha;
     String lugar;
-    BigDecimal precioBase; // Cambiado de double a BigDecimal
+    BigDecimal precioBase; 
 
     public Concierto(int id, String nombre, String artista, LocalDate fecha, String lugar, BigDecimal precioBase) {
         this.id = id;
@@ -56,7 +56,7 @@ class Zona {
     int id;
     String nombreZona;
     int capacidad;
-    BigDecimal precioAdicional; // Cambiado de double a BigDecimal
+    BigDecimal precioAdicional; 
 
     public Zona(int id, String nombreZona, int capacidad, BigDecimal precioAdicional) {
         this.id = id;
@@ -77,7 +77,7 @@ class Ticket {
     Cliente cliente;
     Concierto concierto;
     Zona zona;
-    BigDecimal precioFinal; // Cambiado de double a BigDecimal
+    BigDecimal precioFinal; 
     LocalDate fechaCompra;
 
     public Ticket(int id, Cliente cliente, Concierto concierto, Zona zona) {
@@ -85,7 +85,7 @@ class Ticket {
         this.cliente = cliente;
         this.concierto = concierto;
         this.zona = zona;
-        this.precioFinal = concierto.precioBase.add(zona.precioAdicional); // Suma con BigDecimal
+        this.precioFinal = concierto.precioBase.add(zona.precioAdicional); 
         this.fechaCompra = LocalDate.now();
     }
 
@@ -114,7 +114,7 @@ public class notasvibrantes {
             System.out.println("5. Cancelar ticket.");
             System.out.println("6. Salir.");
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir salto de línea
+            scanner.nextLine(); 
 
             switch (opcion) {
                 case 1:
